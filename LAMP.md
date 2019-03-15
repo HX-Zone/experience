@@ -6,7 +6,8 @@ LAMP安装总结
 可查看当前系统版本：`cat /etc/redhat-release;`
 安装时，一般需先安装源，然后下载安装包rpm，然后`rpm -Uvh xxx.rpm;`，很可能需要带上`--force --nodeps`
 安装命令：`yum install httpd -y;`
-如果遇到类似>php72u-common conflicts with php-common-5.4.16
+如果遇到类似
+>php72u-common conflicts with php-common-5.4.16
 这样的报错，那就需要执行`yum install php72w;`来解决
 安装完后，使用`systemctl start httpd.service;`，这个过程中可能会因为80端口被占用导致报错，所以需要先查看下该端口`netstat -anp |grep 端口号`,是否状态为LISTEN，如果有，可杀死该进程或通过修改httpd.conf的port
     2.安装php：这边以php作为httpd的一个模块进行安装为例。
