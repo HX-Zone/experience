@@ -25,6 +25,7 @@ LAMP安装总结
 
 4.redis的安装
 ---
-需安装redis及php的redis拓展，redis的安装可使用yum，拓展的安装需使用源码安装，涉及到phpize,unzip等工具，参考[博客]<br/>(https://www.cnblogs.com/eczhou/p/5588375.html)。redis的启动：`redis-server /etc/redis.conf（指定conf）;`,关闭`redis-cli shut down;`。<br/>
+需安装redis及php的redis拓展，redis的安装可使用yum，拓展的安装需使用源码安装，涉及到phpize,unzip等工具，参考[博客]https://www.cnblogs.com/eczhou/p/5588375.html)。<br/>
+redis的启动：`redis-server /etc/redis.conf（指定conf）;`,关闭`redis-cli shut down;`。<br/>
 当注释掉redis.conf里的bind 127.0.0.1时，redis将可被任何主机连接，此时需设置配置项requirepass，也可通过iptables限制访问IP。<br/>
 redis的备份方式有两种bgrewrite和appendonly。
