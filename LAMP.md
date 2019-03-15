@@ -12,7 +12,7 @@ LAMP安装总结
 2.安装php
 ---
 这边以php作为httpd的一个模块进行安装为例。<br/>
-首先php在此系统中的三大作用：一、配置httpd支持处理PHP请求；二、提供CGI接口和PHP解释器；三、配置支持数据库连接。<br/>
+首先php在此系统中的二大作用：一、配置httpd支持处理PHP请求；二、配置支持数据库连接。<br/>
 安装时同安装apache类似，参考[博客](https://yq.aliyun.com/articles/608093)<br/>
 重点是安装完后是否lib64php5.so这个拓展文件，如果没有，则httpd无法支持php<br/>
 有的话，则需修改httpd.conf，加入AddType 以及LoadModule php5_module modules/libphp5.so<br/>
