@@ -18,8 +18,8 @@ LAMP安装总结
 重启httpd即可，使用phphinfo()查看是否可用，或`php xxx.php;`
 3.安装mysql以及php的mysql拓展
 ---
-   首先使用whereis mysqld查看mysql-server是否已安装，如果有可通过`systemctl start mysqld.service;`以及查看端口3306是否被监听，来确认安装是否成功。
+首先使用whereis mysqld查看mysql-server是否已安装，如果有可通过`systemctl start mysqld.service;`以及查看端口3306是否被监听，来确认安装是否成功。
 若没有则可安装源，下载包`yum install mysql-server;`来安装，参考[博客](https://www.cnblogs.com/julyme/p/5969626.html),php一般自带mysql.so所以在mysql安装成功后即可在php上使用。
 4.redis的安装
 ---
-   需安装redis及php的redis拓展，redis的安装可使用yum，拓展的安装需使用源码安装，涉及到phpize,unzip等工具，参考[博客](https://www.cnblogs.com/eczhou/p/5588375.html)。redis的启动：`redis-server /etc/redis.conf（指定conf）;`,关闭`redis-cli shut down;`。当注释掉redis.conf里的bind 127.0.0.1时，redis将可被任何主机连接，此时需设置配置项requirepass，也可通过iptables限制访问IP。redis的备份方式有两种bgrewrite和appendonly。
+需安装redis及php的redis拓展，redis的安装可使用yum，拓展的安装需使用源码安装，涉及到phpize,unzip等工具，参考[博客](https://www.cnblogs.com/eczhou/p/5588375.html)。redis的启动：`redis-server /etc/redis.conf（指定conf）;`,关闭`redis-cli shut down;`。当注释掉redis.conf里的bind 127.0.0.1时，redis将可被任何主机连接，此时需设置配置项requirepass，也可通过iptables限制访问IP。redis的备份方式有两种bgrewrite和appendonly。
