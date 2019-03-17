@@ -10,4 +10,4 @@ LNMP的安装
   ---
   -PHP-FPM是一个PHP FastCGI管理器，是只用于PHP的,可以在 http://php-fpm.org/download 下载得到。  
   -PHP-FPM其实是PHP源代码的一个补丁，旨在将FastCGI进程管理整合进PHP包中。必须将它patch到你的PHP源代码中，在编译安装PHP后才可以使用。    
-  -由上可知，如果服务器上已安装的php没有支持php-fpm，则需将php卸载，然后php和php-fpm一起安装。
+  -由上可知，如果服务器上已安装的php没有支持php-fpm，则需先将旧版php卸载，然后php和php-fpm一起安装。
