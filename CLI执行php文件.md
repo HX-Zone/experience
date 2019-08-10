@@ -6,14 +6,14 @@ MINIT -> RINIT -> SCRIPT -> RSHUTDOWN -> MSHUTDOWN
 启动代码在sapi/cli/php_cli.c中  
 代码从main函数开始执行  
 主体运行流程：  
-  1.填充sapi模块的结构  
-  2.启动sapi，进行sapi的一些全局设置  
-  3.运行sapi模块的startup，对各种模块，扩展，资源进行注册和初始化（register、init）  
-  4.初始化请求  
-  5.编译php文件，然后把编译后的opcodes执行  
-  6.请求关闭及释放的相关工作  
-  7.相关的各种模块的关闭及释放  
-  8.关闭sapi相关资源sapi_shutdown
+  1. 填充sapi模块的结构  
+  2. 启动sapi，进行sapi的一些全局设置  
+  3. 运行sapi模块的startup，对各种模块，扩展，资源进行注册和初始化（register、init）  
+  4. 初始化请求  
+  5. 编译php文件，然后把编译后的opcodes执行  
+  6. 请求关闭及释放的相关工作  
+  7. 相关的各种模块的关闭及释放  
+  8. 关闭sapi相关资源sapi_shutdown
 
 ### php程序的编译
 程序的编译包含这一系列过程：词法分析、语法分析、语义分析、中间代码生成（前面三步的作用是分析源程序）、代码优化、目标代码生成（前面三步的作用是构成目标程序）  
